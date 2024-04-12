@@ -1,0 +1,13 @@
+int SENSOR;
+void setup() {
+  Serial.begin(9600);
+  // Entradas analogicas no requieren inicializacion
+}
+void loop() {
+  SENSOR = analogRead(A0);
+  if(SENSOR>90 or SENSOR<120) {
+  Serial.println("campo detectado:");
+  }
+  Serial.println(SENSOR);
+  delay(500);
+}
