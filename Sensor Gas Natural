@@ -1,0 +1,17 @@
+int VALOR;
+
+void setup() {
+  Serial.begin(9600);
+  // entradas analogicas no requieren inicializacion:
+
+}
+
+void loop() {
+  VALOR=analogRead(A0);
+ if (VALOR<80 or VALOR> 210){
+  Serial.print ("Gas Detectado");
+  }
+  Serial.println(VALOR);
+  delay (500);
+
+}
